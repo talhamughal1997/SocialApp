@@ -1,0 +1,26 @@
+plugins {
+    id 'java-library'
+    id 'kotlin-kapt'
+    id 'kotlin'
+}
+
+dependencies {
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:1.6.1"
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.6.10"
+
+
+    implementation "com.google.dagger:hilt-core:2.42"
+    implementation 'androidx.room:room-common:2.4.2'
+    kapt "com.google.dagger:hilt-compiler:2.42"
+
+    api 'com.squareup.moshi:moshi:1.13.0'
+    kapt 'com.squareup.moshi:moshi-kotlin-codegen:1.13.0'
+
+    kapt "androidx.room:room-compiler:2.4.2"
+
+}
+
+java {
+    sourceCompatibility = JavaVersion.VERSION_1_8
+    targetCompatibility = JavaVersion.VERSION_1_8
+}
